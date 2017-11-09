@@ -56,3 +56,11 @@ if(numeroDNI >= 0 && numeroDNI <= 99999999) {
 } else {
     alert("El número de DNI que ingresaste no es valido");
 }
+
+var factorial = 1;
+
+for(var i = prompt("Digita un numero para obtener su fatorial"); i > 1; i--) {
+    factorial *= i;
+}
+
+alert("El factorial es: " + factorial);
