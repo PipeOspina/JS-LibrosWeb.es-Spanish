@@ -7,6 +7,8 @@ alert(mensaje);
 alert("Soy el primer script :)");
 alert(meses);
 
+// OPERADORES
+// Ejercicio 4
 
 var valores = [true, 5, false, "hola", "adios", 2];
 var resultado;
@@ -25,6 +27,9 @@ resultado = valores[1] * valores[5]; // Multiplicación = 10
 resultado = valores[1] / valores[5]; // División = 2,5
 resultado = valores[1] % valores[5]; // Modulo = 1
 
+// ESTRUCTURAS DE CONTROL DE FLUJO
+// Ejercicio 5
+
 var numero1 = 5;
 var numero2 = 8;
  
@@ -40,6 +45,8 @@ if(numero1 < 0) {
 if(++numero1 < numero2) {
   alert("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
 }
+
+//Ejercicio 6
 
 var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
 
@@ -57,6 +64,8 @@ if(numeroDNI >= 0 && numeroDNI <= 99999999) {
     alert("El número de DNI que ingresaste no es valido");
 }
 
+// Ejercicio 7
+
 var factorial = 1;
 
 for(var i = prompt("Digita un numero para obtener su fatorial"); i > 1; i--) {
@@ -64,3 +73,20 @@ for(var i = prompt("Digita un numero para obtener su fatorial"); i > 1; i--) {
 }
 
 alert("El factorial es: " + factorial);
+
+// FUNCIONES Y PROPIEDADES BASICAS
+
+var vocales = ["a", "e", "i", "o", "u"];
+var util;
+
+util = vocales.join(" "); // "a e i o u"
+util = vocales.pop(); // ["a", "e", "i", "o"]
+util = vocales.push("A") // ["a", "e", "i", "o", "u", "A"]
+util = vocales.shift(); //["e", "i", "o", "u"]
+util = vocales.unshift("A") // ["A", "a", "e", "i", "o", "u"]
+util = vocales.reverse(); // ["u", "o", "i", "e", "a"]
+
+var numero3 = 4564.34567;
+numero3.toFixed(2); // 4564.35
+numero3.toFixed(6); // 4564.345670
+numero3.toFixed(); // 4564
