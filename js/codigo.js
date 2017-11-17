@@ -90,3 +90,7 @@ var numero3 = 4564.34567;
 numero3.toFixed(2); // 4564.35
 numero3.toFixed(6); // 4564.345670
 numero3.toFixed(); // 4564
+
+var cadena = "holi amigo";
+cadena.split(" "); // ["holi", "amigo"]
+cadena.split(""); // ["h", "o", "l", "i", " ", "a", "m", "i", "g", "o"]
