@@ -45,9 +45,6 @@ function esPalindroma(cadena) {
             reves += cadena.split("").reverse()[i];
         }
     }
-    /*for(var i = 0; i < cadena.split("").reverse().length; i++) {
-        
-    }*/
     return pegado == reves;
 }
 
