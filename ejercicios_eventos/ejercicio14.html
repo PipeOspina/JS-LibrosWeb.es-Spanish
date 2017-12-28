@@ -10,19 +10,21 @@ function muestraOculta() {
     var number = parts[1];
     var element = document.getElementById("contenidos_" + number);
     
-    switch(element.style.display) {
-        case "none":
-            element.style.display = "block";
-            this.textContent = "Ocultar contenidos";
-            break;
-        case "block":
-        case "":
-            element.style.display = "none";
-            this.innerHTML = "Mostrar contenidos";
-            break;
-        default:
-            alert("No reconocemos esa propiedad");
-            break;
+    if(element) {
+        switch(element.style.display) {
+            case "none":
+                element.style.display = "block";
+                this.textContent = "Ocultar contenidos";
+                break;
+            case "block":
+            case "":
+                element.style.display = "none";
+                this.innerHTML = "Mostrar contenidos";
+                break;
+            default:
+                alert("No reconocemos esa propiedad");
+                break;
+        }
     }
 }
 
