@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 17</title>
+    <style>
+        textarea {
+            font-size: 2em;
+            width: 500px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="">
+        <label for="texto">Texto</label>
+        <textarea id="texto"></textarea>
+        <label id="rest"></label>
+        <input type="button" value="Enviar">
+    </form>
+    <br><br>
+    <a href="../index.html">Regresar</a>
+
+    <script>
+        let MaxChar = 55;
+
+        window.onload = function() {
+            var textarea = document.getElementById("texto");
+            document.getElementById("rest").textContent = MaxChar;
+            textarea.onkeypress = comprobar;
+            textarea.onkeyup = actualizar;
+        };
+
+        function actualizar() {
+            document.getElementById("rest").textContent = MaxChar - document.getElementById("texto").value.length;
+        }
+
+        function comprobar(event) {
+            if(event.charCode != 0)
+                return limita(MaxChar);
+            else
+                return true;
+        }
+
+        function limita(maximoCaracteres) {
+            var elemento = document.getElementById("texto");
+            if(elemento.value.length >= maximoCaracteres)
+                return false;
+            else
+                return true;
+        }
+
+    </script>
+</body>
+</html>
